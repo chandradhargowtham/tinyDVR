@@ -27,7 +27,8 @@ Mac:
 
 Linux:
 ```sudo apt-get update
-   sudo apt-get install -y ffmpeg```
+   sudo apt-get install -y ffmpeg
+```
 
 Windows:
 Install FFmpeg and add it to PATH (so that ffmpeg works in Command Prompt).
