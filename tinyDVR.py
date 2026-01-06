@@ -1,23 +1,13 @@
 #!/usr/bin/env python3
 """
-rtsp_dvr.py
+tinyDVR.py
+by Chandradhar C
 
-A minimal, low-resource RTSP “DVR” for TP-Link (or any RTSP camera) that:
+A minimal, low-resource RTSP “DVR” for TP-Link (or any RTSP camera).
 
-✅ Records the live RTSP stream continuously using FFmpeg (efficient)
-✅ Saves recordings as small time-based chunks (segments)
-✅ Names files by date/time (YYYY-MM-DD_HH-MM-SS.mp4)
-✅ Enforces a strict storage cap (default 10 GB) by deleting oldest files
-✅ Writes a simple status.json so you can see if recording is healthy
-✅ Auto-restarts FFmpeg if it dies
 
-Important notes for your camera:
-- Your username/password contain '@' so we URL-encode them safely.
-- Your stream shows timestamp issues; we use FFmpeg flags to handle DTS/PTS problems.
-- Audio is pcm_alaw (G.711) which is annoying with MP4; we drop audio by default (-an)
-  for best stability and minimal CPU. If you want audio, see the NOTE in code.
 
-Tested conceptually on macOS/Linux/Windows (needs ffmpeg installed).
+Tested on macOS/Linux (needs ffmpeg installed).
 """
 
 import os
@@ -36,11 +26,11 @@ import psutil
 # Configuration (EDIT THESE)
 # ----------------------------
 
-# Camera credentials and address
-CAM_USER = "Chandradhargowtham93@gmail.com"
-CAM_PASS = "P0rap@ndi"
-CAM_HOST = "192.168.29.101"
-CAM_PORT = 554
+# Camera credentials and address - Set username and password on the camera app, get IP from the same app.
+CAM_USER = "username@email.com"
+CAM_PASS = "password"
+CAM_HOST = "0.0.0.0"
+CAM_PORT = 554                # Change if need - works for TP_Link Cams
 CAM_PATH = "/stream1"         # change if needed (e.g., /stream2)
 
 # Output storage
