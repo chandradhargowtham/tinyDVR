@@ -2,11 +2,17 @@
 tinyDVR - simple rtsp Viewer by Chandradhar C (https://www.chandradhar.me)
 ---------------------------------------------------------------------------------
 This Python app records a RTSP camera feed continuously and:
+
 1.Saves video as small chunks (segments) like 2026-01-06_14-33-00.mp4
+
 2.Keeps only up to 10 GB on disk (auto-deletes oldest files first)
+
 3.Writes status.json so you can check if recording is healthy or if there is any error.
+
 4.Automatically restarts FFmpeg if it crashes
+
 5.Uses very low CPU because it does not re-encode video (-c:v copy)
+
 6.By default it records video only (audio is disabled) for maximum compatibility and minimal CPU.
 
 Tested on TP-Link c200 Cameras.
