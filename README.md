@@ -46,15 +46,19 @@ CAM_HOST
 CAM_PATH (commonly /stream1 or /stream2)
 OUTPUT_DIR
 SEGMENT_SECONDS (chunk size)
-MAX_STORAGE_GB (your cap)```
+MAX_STORAGE_GB (your cap)
+```
 
 4. Run the script:
-```python3 tinyDVR.py```
+```
+python3 tinyDVR.py
+```
 
 You should see something like:
 ```
 [health] recording=True reason=ok folder=123.4MB cpu=... mem=...MB
 Stop the Application using Ctrl+C
+
 ```
 
 5. The Output files will be in the recordings folder with respective timestamps with a current status at status.json.
