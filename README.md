@@ -49,6 +49,7 @@ Stop the Application using Ctrl+C
 
 OPTIONAL:
 6. Running as a Linux service:
+"A Linux service is a background process that runs continuously to perform specific tasks. Services can start automatically at boot time and run without user intervention. Examples include web servers, database servers, and network services."
 
 Create /etc/systemd/system/tinyDVR.service
 
